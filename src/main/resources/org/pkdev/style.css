@@ -1,0 +1,35 @@
+#settings{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-image: url('cog.png');
+    -fx-cursor: pointer;
+}
+*{
+-fx-background-radius: 0, 0;
+}
+
+#inputText,#showText:focused{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 5, 4, 3;
+    -fx-background-radius: 0, 0;
+    -fx-border-color: lightgray;
+}
+#skip{
+    -fx-padding-insets: 0, 0, 0, 0;
+    -fx-margin-insets: 0, 0, 0, 0;
+    -fx-border-width: 5, 5, 5, 5;
+}
+.button:focused{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.check-box:focused > .box{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+#inputText{
+    -fx-padding-insets: 0, 0, 0, 0;
+    -fx-margin-insets: 0, 0, 0, 0;
+    -fx-border-color: lightgray;
+}
