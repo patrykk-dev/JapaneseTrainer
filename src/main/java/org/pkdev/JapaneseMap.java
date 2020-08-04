@@ -174,7 +174,7 @@ public class JapaneseMap {
 
         int newIndex;
         do{
-            newIndex = r.nextInt(70);
+            newIndex = r.nextInt(71);
         }while(stats.alreadyAnswered(newIndex,lastType) || newIndex == lastIndex);
 
         lastIndex = newIndex;
