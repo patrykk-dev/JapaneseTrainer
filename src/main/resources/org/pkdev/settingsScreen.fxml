@@ -4,33 +4,36 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css" fx:controller="org.pkdev.controllers.SettingsController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pkdev.controllers.SettingsController">
    <children>
       <GridPane prefHeight="357.0" prefWidth="337.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="107.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="260.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="40.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="240.0" minHeight="240.0" prefHeight="240.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#saveSettings" prefHeight="25.0" prefWidth="100.0" text="Save" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <Label prefHeight="20.0" prefWidth="90.0" text="Use Katakana" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button maxHeight="25.0" maxWidth="100.0" minHeight="25.0" minWidth="100.0" mnemonicParsing="false" onAction="#saveSettings" prefHeight="25.0" prefWidth="100.0" text="Save" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+            <Label maxHeight="20.0" maxWidth="90.0" minHeight="20.0" minWidth="90.0" prefHeight="20.0" prefWidth="90.0" text="Use Katakana" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <padding>
                   <Insets right="10.0" />
                </padding></Label>
-            <Label layoutX="10.0" layoutY="45.0" prefHeight="20.0" prefWidth="90.0" text="Use Hiragana" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+            <Label layoutX="10.0" layoutY="45.0" maxHeight="20.0" maxWidth="90.0" minHeight="20.0" minWidth="90.0" prefHeight="20.0" prefWidth="90.0" text="Use Hiragana" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <padding>
                   <Insets right="10.0" />
                </padding></Label>
@@ -43,7 +46,7 @@
                   </CheckBox>
                </children>
             </HBox>
-            <Text fx:id="textSettingsWarning" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to select one alphabet!" textAlignment="CENTER" visible="false" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Text fx:id="textSettingsWarning" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to select one alphabet!" textAlignment="CENTER" visible="false" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                <children>
                   <CheckBox fx:id="checkboxUseKatakana" mnemonicParsing="false">
@@ -53,6 +56,35 @@
                   </CheckBox>
                </children>
             </HBox>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label maxHeight="20.0" maxWidth="125.0" minHeight="20.0" minWidth="125.0" prefHeight="20.0" prefWidth="125.0" text="Seconds for response" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="(set 0 to disable timer)" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <TextField maxHeight="20.0" maxWidth="30.0" minHeight="20.0" minWidth="30.0" prefHeight="20.0" prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </TextField>
          </children>
       </GridPane>
    </children>
